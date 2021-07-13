@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-06-18 17:14:47
+ * @LastEditTime: 2021-07-05 10:23:01
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \basic\src\services\login.ts
+ */
 import request from '@/utils/request';
 
 export type LoginParamsType = {
@@ -8,7 +16,7 @@ export type LoginParamsType = {
 };
 
 export async function fakeAccountLogin(params: LoginParamsType) {
-  return request('/api/login/account', {
+  return request('/web/auth/login', {
     method: 'POST',
     data: params,
   });

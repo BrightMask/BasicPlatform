@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-06-18 17:14:47
+ * @LastEditTime: 2021-07-13 11:40:06
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \basic\src\models\login.ts
+ */
 import { stringify } from 'querystring';
 import type { Reducer, Effect } from 'umi';
 import { history } from 'umi';
@@ -40,7 +48,7 @@ const Model: LoginModelType = {
         payload: response,
       });
       // Login successfully
-      if (response.status === 'ok') {
+      if (response.code === 0) {
         const urlParams = new URL(window.location.href);
         const params = getPageQuery();
         message.success('🎉 🎉 🎉  登录成功！');
